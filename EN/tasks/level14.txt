@@ -12,7 +12,8 @@ On fileserver two files sit side by side:
 GOAL: download both, verify integrity, and only then read the
       password for level15.
 
-Hint: sha256sum -c takes a checksum file and verifies it. Expect "OK".
+Need help? Check hint.txt
+Curious how it works? Check info.txt
 
 Next:  ssh level15@localhost -p 3235
 ============================================================

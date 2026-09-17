@@ -1,0 +1,3 @@
+rule of thumb — whoever LISTENS on a port is the server; here
+fileserver listens, you are the client. Redirect nc's output
+into a file.

@@ -1,0 +1,2 @@
+base64 can also go the other way (flag -d). Pipe receive into
+decode.

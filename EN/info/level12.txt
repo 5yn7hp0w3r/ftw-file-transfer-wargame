@@ -1,0 +1,14 @@
+── openssl enc (symmetric encryption) ───────────────────
+Encoding ≠ encryption. base64 anyone reverses; AES needs the
+key. openssl's `enc` does symmetric crypto from the CLI.
+
+  openssl enc -aes-256-cbc -pbkdf2 -salt -base64 -k KEY   # encrypt
+  openssl enc -d ...same flags...                          # decrypt
+
+  -aes-256-cbc  cipher+mode      -pbkdf2  derive key from
+  -salt         random salt      passphrase (many iterations)
+  -base64       armour output    -k KEY   passphrase
+
+Gotcha: encrypt and decrypt MUST use identical parameters
+(cipher, kdf, salt handling). CBC gives confidentiality, not
+integrity — real protocols add a MAC / use AEAD (GCM).

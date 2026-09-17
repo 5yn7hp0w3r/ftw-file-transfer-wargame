@@ -11,8 +11,8 @@ At  http://fileserver/level17/  sit several files part.00, part.01, ...
 GOAL: download all chunks, concatenate in the right order, read the
       password for level18.
 
-Hint: open http://fileserver/level17/ with curl to see the chunk list.
-      They join with a plain cat in name order (part.00, part.01, ...).
+Need help? Check hint.txt
+Curious how it works? Check info.txt
 
 Next:  ssh level18@localhost -p 3238
 ============================================================

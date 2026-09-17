@@ -9,8 +9,8 @@ On fileserver, port 4447 hands out data ENCODED in base64.
 
 GOAL: receive and decode (password for level9).
 
-Hint: base64 can also go the other way (flag -d). Pipe receive into
-      decode.
+Need help? Check hint.txt
+Curious how it works? Check info.txt
 
 Next:  ssh level9@localhost -p 3229
 ============================================================

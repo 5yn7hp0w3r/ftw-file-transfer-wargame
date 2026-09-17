@@ -1,0 +1,1 @@
+xxd can reverse a plain hex dump — plain + revert. ( xxd -h )

@@ -9,7 +9,8 @@ File  http://fileserver/level9/next.b32  is base32-encoded.
 
 GOAL: download and decode (password for level10).
 
-Hint: base32 works like base64 (-d). You already know how to fetch.
+Need help? Check hint.txt
+Curious how it works? Check info.txt
 
 Next:  ssh level10@localhost -p 3230
 ============================================================

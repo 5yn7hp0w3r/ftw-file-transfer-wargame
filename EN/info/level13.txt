@@ -1,0 +1,12 @@
+── ncat --ssl (encrypted channel) ───────────────────────
+Sometimes you encrypt the CHANNEL, not the file. ncat (from
+nmap) can wrap a plain TCP transfer in TLS:
+
+  ncat --ssl -lvnp 4444 < secret     # server, self-signed cert
+  ncat --ssl host 4444 > out         # client
+
+The cert is self-signed, so clients warn — fine for ad-hoc
+transfers, and it defeats passive sniffing on the wire. This
+is the difference between hiding the *contents in transit*
+(TLS) vs hiding the *file at rest* (openssl enc, level 12).
+socat can do the same with OPENSSL address types.

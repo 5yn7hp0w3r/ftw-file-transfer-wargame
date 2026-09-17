@@ -1,0 +1,2 @@
+uudecode parses the "begin ... end" header itself and recreates
+the file under its original name. From the sharutils package.

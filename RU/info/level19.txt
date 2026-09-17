@@ -1,0 +1,13 @@
+── socat ─────────────────────────────────────────────────
+socat = «netcat на стероидах». Соединяет два *адреса* и качает
+байты между ними — и понимает куда больше типов адресов, чем nc:
+
+  TCP / TCP-LISTEN   UDP        OPEN:file        EXEC:'cmd'
+  PTY (настоящие tty) UNIX-*    OPENSSL / OPENSSL-LISTEN
+
+  socat - TCP:host:4450                 забрать в stdout
+  socat TCP-LISTEN:4450,reuseaddr,fork OPEN:file,rdonly
+
+fork обслуживает много клиентов; reuseaddr спасает от «address in
+use». socat даёт полноценные TTY-реверс-шеллы и шифрованные
+релеи, чего nc в одиночку не умеет.

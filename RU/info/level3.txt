@@ -1,0 +1,11 @@
+── Однострочники perl / php / ruby ───────────────────────
+Когда вырезаны curl, wget и python, в системе почти наверняка
+остался интерпретатор. Каждый умеет тянуть URL:
+
+  perl -MLWP::Simple -e 'getstore($url,$file)'
+  php  -r 'echo file_get_contents($url);'  # нужен allow_url_fopen
+  ruby -ropen-uri -e 'print URI.open($url).read'
+  node -e "require('https').get(url,...)"
+
+Это «living off the land»: ты не приносишь тулзы, а используешь
+то, чему цель уже доверяет. Многие такие трюки собраны в GTFOBins.

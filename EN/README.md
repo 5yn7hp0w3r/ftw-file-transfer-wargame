@@ -1,6 +1,6 @@
 # FTW — File Transfer Wargame 🚩
 
-An OverTheWire-style wargame about moving files across the wire: download, serve, exfiltrate,
+An OverTheWire-style CTF wargame about moving files across the wire: download, serve, exfiltrate,
 encode. You SSH into a box whose toolset is deliberately stripped down, and you use whatever
 technique is left. Inside the file you pull is the password for the next level. **34 levels**
 (0–33) in five parts + a fileserver = 35 containers.
@@ -20,6 +20,10 @@ docker compose down            # tear down
 ssh level0@localhost -p 3220   # starting password: start-here
 cat task.txt                   # the brief is always in ~/task.txt
 ```
+
+Each level ships three files in `~`: **`task.txt`** (brief), **`hint.txt`**
+(opt-in nudge), **`info.txt`** (tool deep-dive).
+
 A level's port = **3220 + number**. The full walkthrough is in `SOLVES.md`.
 
 | Part | Levels | About |

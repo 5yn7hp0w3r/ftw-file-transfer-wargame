@@ -8,8 +8,8 @@ port 4446.
 GOAL: receive the stream, unpack on the fly, find flag.txt inside
       (password for level8).
 
-Hint: pipe the receiver (nc) into the unpacker (tar); tar can read an
-      archive from stdin.
+Need help? Check hint.txt
+Curious how it works? Check info.txt
 
 Next:  ssh level8@localhost -p 3228
 ============================================================

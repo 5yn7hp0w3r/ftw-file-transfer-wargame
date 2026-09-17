@@ -1,0 +1,12 @@
+── Z85 (ZeroMQ base85) ───────────────────────────────────
+Z85 is a base85 flavour designed by the ZeroMQ project to be
+safe inside source code and string literals — its 85-char
+alphabet avoids quotes, backslashes and other troublemakers.
+
+  requirement: input length must be a multiple of 4 bytes
+  basenc --z85        encode
+  basenc --z85 -d     decode
+
+Same density win as other base85s (~25% overhead), but picked
+specifically so the output can be pasted into configs, JSON
+and code without escaping headaches.

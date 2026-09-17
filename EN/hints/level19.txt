@@ -1,0 +1,3 @@
+socat connects two addresses. One end is stdout (-), the other
+is TCP:<host>:<port>. Route the server's stream to your screen
+or a file.

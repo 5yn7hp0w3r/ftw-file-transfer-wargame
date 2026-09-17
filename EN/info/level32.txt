@@ -1,0 +1,15 @@
+── scripted socket + XOR brute (GHOST) ───────────────────
+The final ghost combines skills: reach a socket in code, read
+all the bytes, and defeat a single-byte XOR with no given key.
+
+  import socket
+  s=socket.socket(); s.connect((host,port))
+  data=s.makefile('rb').read()          # read to EOF
+
+  for k in range(256):                  # brute all 256 keys
+      out=bytes(b^k for b in data)
+      if all(32<=c<127 or c in (10,13) for c in out):
+          print(k, out)                 # printable => likely it
+
+A single-byte key has only 256 possibilities — trivial to brute
+by scoring each candidate (printable ratio, known words).

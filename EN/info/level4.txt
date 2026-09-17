@@ -1,0 +1,13 @@
+── gawk networking (/inet) ───────────────────────────────
+GNU awk has a little-known superpower: it can open TCP/UDP
+sockets through special filenames.
+
+  "/inet/tcp/0/host/port"      (0 = any local port)
+  cmd |& s                     two-way coprocess to socket s
+
+You literally hand-write the HTTP request and read the raw
+reply — which arrives WITH status line and headers, so you
+strip everything up to the first blank line to get the body.
+
+Obscure, but on a hardened box with almost nothing installed,
+"but it has awk" can be the whole exfil path.

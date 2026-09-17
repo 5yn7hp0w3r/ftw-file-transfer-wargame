@@ -8,8 +8,8 @@ Nothing network-capable at all. Only bash — but it has the
 GOAL: open a socket to fileserver:80, send GET /level5/next.txt,
       strip the HTTP headers.
 
-Hint: exec N<>/dev/tcp/<host>/<port> opens a descriptor; write the
-      GET request into it, read the reply back.
+Need help? Check hint.txt
+Curious how it works? Check info.txt
 
 Next:  ssh level6@localhost -p 3226
 ============================================================

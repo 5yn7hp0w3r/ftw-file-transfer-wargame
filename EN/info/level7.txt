@@ -1,0 +1,14 @@
+── tar over a pipe ───────────────────────────────────────
+tar streams to stdout, netcat streams over the wire — pipe
+them together and a whole directory tree moves in one shot,
+preserving permissions, symlinks and timestamps.
+
+  # sender
+  tar czf - dir | nc -lvnp 4444
+  # receiver
+  nc host 4444 | tar xzf -
+
+  c create · x extract · z gzip · f - use stdout/stdin
+
+No temp archive touches disk. Same pattern with ssh instead
+of nc is the classic `tar czf - dir | ssh host 'tar xzf -'`.

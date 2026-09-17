@@ -1,0 +1,1 @@
+gunzip и zcat умеют читать gzip из stdin.

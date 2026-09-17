@@ -1,0 +1,2 @@
+openssl enc can decrypt (-d) with the same parameters used to
+encrypt: algorithm aes-256-cbc, pbkdf2, base64 input, key via -k.

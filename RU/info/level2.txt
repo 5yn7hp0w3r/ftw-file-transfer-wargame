@@ -1,0 +1,14 @@
+── Python: urllib.request ────────────────────────────────
+Python есть почти на любом сервере, а его стандартная библиотека
+качает по HTTP без сторонних зависимостей.
+
+  urllib.request.urlopen(url).read()      # байты в память
+  urllib.request.urlretrieve(url, path)   # сразу на диск
+
+Заметки:
+  * ssl.create_default_context() рулит проверкой сертификата.
+  * Для «взрослого» кода удобнее requests, но это не stdlib —
+    поэтому urllib это «всегда под рукой».
+  * В Python 2 то же: urllib2 / urllib.urlretrieve.
+
+Классический ход «нет curl/wget? есть python».

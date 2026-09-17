@@ -1,0 +1,12 @@
+── zlib (raw DEFLATE) ────────────────────────────────────
+Тот же DEFLATE, что в gzip, но с крошечным 2-байтовым заголовком
+zlib + Adler-32 вместо gzip-обёртки. Разница важна: `gunzip`
+отказывается есть сырой zlib-поток.
+
+Где прячется: чанки PNG, потоки PDF, формат ZIP, HTTP «deflate»,
+многие бинарные протоколы и сейвы игр.
+
+  python3 -c 'import zlib,sys;sys.stdout.buffer.write(zlib.decompress(sys.stdin.buffer.read()))'
+  openssl zlib -d        (если собран с поддержкой zlib)
+
+Распознать «это zlib, а не gzip» — половина дела.

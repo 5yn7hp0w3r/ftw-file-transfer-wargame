@@ -8,9 +8,8 @@ php и ruby.
 ЦЕЛЬ: забрать  http://fileserver/level3/next.txt
        любым из них (пароль для level4).
 
-Подсказка: у каждого есть способ прочитать URL как строку —
-           perl: LWP::Simple ·  php: file_get_contents ·
-           ruby: open-uri.
+Нужна помощь? Загляни в hint.txt
+Хочешь глубже? Смотри info.txt
 
 Переход:   ssh level4@localhost -p 3224
 ============================================================

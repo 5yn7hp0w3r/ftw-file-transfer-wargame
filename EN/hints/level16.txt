@@ -1,0 +1,3 @@
+XOR is reversible with the same key (a ^ k ^ k == a). First
+base64 -d, then walk the bytes ^ 0x42 (a python3 one-liner is
+handy).

@@ -1,0 +1,15 @@
+── curl & wget ───────────────────────────────────────────
+The two ubiquitous HTTP clients.
+
+curl  — one-shot transfers, talks many protocols.
+  -o file   save to file      -O   keep remote name
+  -s silent -L follow redirects -k skip TLS verify
+  -x proxy  -H add header      -d POST body
+
+wget — built for retrieval / mirroring.
+  -O file   output (capital)   -qO-  quiet, to stdout
+  -r -np    recursive mirror   -c    resume
+
+Gotcha people trip on: wget's output flag is -O (capital),
+curl's is -o (lowercase). Both are prime download primitives
+once you land on a box that has them.

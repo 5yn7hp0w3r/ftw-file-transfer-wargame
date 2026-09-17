@@ -1,0 +1,1 @@
+sha256sum -c takes a checksum file and verifies it. Expect "OK".

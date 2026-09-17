@@ -22,7 +22,7 @@ services:
     container_name: ftw_level0
     hostname: level0
     ports: ["3220:22"]
-    volumes: ["./flags/level0:/flag:ro", "./tasks/level0.txt:/task/task.txt:ro"]
+    volumes: ["./flags/level0:/flag:ro", "./tasks/level0.txt:/task/task.txt:ro", "./hints/level0.txt:/task/hint.txt:ro", "./info/level0.txt:/task/info.txt:ro"]
 
   level1:
     <<: *level-defaults
@@ -30,7 +30,7 @@ services:
     container_name: ftw_level1
     hostname: level1
     ports: ["3221:22"]
-    volumes: ["./flags/level1:/flag:ro", "./tasks/level1.txt:/task/task.txt:ro"]
+    volumes: ["./flags/level1:/flag:ro", "./tasks/level1.txt:/task/task.txt:ro", "./hints/level1.txt:/task/hint.txt:ro", "./info/level1.txt:/task/info.txt:ro"]
 
   level2:
     <<: *level-defaults
@@ -38,7 +38,7 @@ services:
     container_name: ftw_level2
     hostname: level2
     ports: ["3222:22"]
-    volumes: ["./flags/level2:/flag:ro", "./tasks/level2.txt:/task/task.txt:ro"]
+    volumes: ["./flags/level2:/flag:ro", "./tasks/level2.txt:/task/task.txt:ro", "./hints/level2.txt:/task/hint.txt:ro", "./info/level2.txt:/task/info.txt:ro"]
 
   level3:
     <<: *level-defaults
@@ -46,7 +46,7 @@ services:
     container_name: ftw_level3
     hostname: level3
     ports: ["3223:22"]
-    volumes: ["./flags/level3:/flag:ro", "./tasks/level3.txt:/task/task.txt:ro"]
+    volumes: ["./flags/level3:/flag:ro", "./tasks/level3.txt:/task/task.txt:ro", "./hints/level3.txt:/task/hint.txt:ro", "./info/level3.txt:/task/info.txt:ro"]
 
   level4:
     <<: *level-defaults
@@ -54,7 +54,7 @@ services:
     container_name: ftw_level4
     hostname: level4
     ports: ["3224:22"]
-    volumes: ["./flags/level4:/flag:ro", "./tasks/level4.txt:/task/task.txt:ro"]
+    volumes: ["./flags/level4:/flag:ro", "./tasks/level4.txt:/task/task.txt:ro", "./hints/level4.txt:/task/hint.txt:ro", "./info/level4.txt:/task/info.txt:ro"]
 
   level5:
     <<: *level-defaults
@@ -62,7 +62,7 @@ services:
     container_name: ftw_level5
     hostname: level5
     ports: ["3225:22"]
-    volumes: ["./flags/level5:/flag:ro", "./tasks/level5.txt:/task/task.txt:ro"]
+    volumes: ["./flags/level5:/flag:ro", "./tasks/level5.txt:/task/task.txt:ro", "./hints/level5.txt:/task/hint.txt:ro", "./info/level5.txt:/task/info.txt:ro"]
 
   level6:
     <<: *level-defaults
@@ -70,7 +70,7 @@ services:
     container_name: ftw_level6
     hostname: level6
     ports: ["3226:22"]
-    volumes: ["./flags/level6:/flag:ro", "./tasks/level6.txt:/task/task.txt:ro"]
+    volumes: ["./flags/level6:/flag:ro", "./tasks/level6.txt:/task/task.txt:ro", "./hints/level6.txt:/task/hint.txt:ro", "./info/level6.txt:/task/info.txt:ro"]
 
   level7:
     <<: *level-defaults
@@ -78,7 +78,7 @@ services:
     container_name: ftw_level7
     hostname: level7
     ports: ["3227:22"]
-    volumes: ["./flags/level7:/flag:ro", "./tasks/level7.txt:/task/task.txt:ro"]
+    volumes: ["./flags/level7:/flag:ro", "./tasks/level7.txt:/task/task.txt:ro", "./hints/level7.txt:/task/hint.txt:ro", "./info/level7.txt:/task/info.txt:ro"]
 
   level8:
     <<: *level-defaults
@@ -86,7 +86,7 @@ services:
     container_name: ftw_level8
     hostname: level8
     ports: ["3228:22"]
-    volumes: ["./flags/level8:/flag:ro", "./tasks/level8.txt:/task/task.txt:ro"]
+    volumes: ["./flags/level8:/flag:ro", "./tasks/level8.txt:/task/task.txt:ro", "./hints/level8.txt:/task/hint.txt:ro", "./info/level8.txt:/task/info.txt:ro"]
 
   level9:
     <<: *level-defaults
@@ -94,7 +94,7 @@ services:
     container_name: ftw_level9
     hostname: level9
     ports: ["3229:22"]
-    volumes: ["./flags/level9:/flag:ro", "./tasks/level9.txt:/task/task.txt:ro"]
+    volumes: ["./flags/level9:/flag:ro", "./tasks/level9.txt:/task/task.txt:ro", "./hints/level9.txt:/task/hint.txt:ro", "./info/level9.txt:/task/info.txt:ro"]
 
   level10:
     <<: *level-defaults
@@ -102,7 +102,7 @@ services:
     container_name: ftw_level10
     hostname: level10
     ports: ["3230:22"]
-    volumes: ["./flags/level10:/flag:ro", "./tasks/level10.txt:/task/task.txt:ro"]
+    volumes: ["./flags/level10:/flag:ro", "./tasks/level10.txt:/task/task.txt:ro", "./hints/level10.txt:/task/hint.txt:ro", "./info/level10.txt:/task/info.txt:ro"]
 
   level11:
     <<: *level-defaults
@@ -110,7 +110,7 @@ services:
     container_name: ftw_level11
     hostname: level11
     ports: ["3231:22"]
-    volumes: ["./flags/level11:/flag:ro", "./tasks/level11.txt:/task/task.txt:ro"]
+    volumes: ["./flags/level11:/flag:ro", "./tasks/level11.txt:/task/task.txt:ro", "./hints/level11.txt:/task/hint.txt:ro", "./info/level11.txt:/task/info.txt:ro"]
 
   level12:
     <<: *level-defaults
@@ -118,7 +118,7 @@ services:
     container_name: ftw_level12
     hostname: level12
     ports: ["3232:22"]
-    volumes: ["./flags/level12:/flag:ro", "./tasks/level12.txt:/task/task.txt:ro"]
+    volumes: ["./flags/level12:/flag:ro", "./tasks/level12.txt:/task/task.txt:ro", "./hints/level12.txt:/task/hint.txt:ro", "./info/level12.txt:/task/info.txt:ro"]
 
   level13:
     <<: *level-defaults
@@ -126,7 +126,7 @@ services:
     container_name: ftw_level13
     hostname: level13
     ports: ["3233:22"]
-    volumes: ["./flags/level13:/flag:ro", "./tasks/level13.txt:/task/task.txt:ro"]
+    volumes: ["./flags/level13:/flag:ro", "./tasks/level13.txt:/task/task.txt:ro", "./hints/level13.txt:/task/hint.txt:ro", "./info/level13.txt:/task/info.txt:ro"]
 
   level14:
     <<: *level-defaults
@@ -134,7 +134,7 @@ services:
     container_name: ftw_level14
     hostname: level14
     ports: ["3234:22"]
-    volumes: ["./flags/level14:/flag:ro", "./tasks/level14.txt:/task/task.txt:ro"]
+    volumes: ["./flags/level14:/flag:ro", "./tasks/level14.txt:/task/task.txt:ro", "./hints/level14.txt:/task/hint.txt:ro", "./info/level14.txt:/task/info.txt:ro"]
 
   level15:
     <<: *level-defaults
@@ -142,7 +142,7 @@ services:
     container_name: ftw_level15
     hostname: level15
     ports: ["3235:22"]
-    volumes: ["./flags/level15:/flag:ro", "./tasks/level15.txt:/task/task.txt:ro"]
+    volumes: ["./flags/level15:/flag:ro", "./tasks/level15.txt:/task/task.txt:ro", "./hints/level15.txt:/task/hint.txt:ro", "./info/level15.txt:/task/info.txt:ro"]
 
   level16:
     <<: *level-defaults
@@ -150,7 +150,7 @@ services:
     container_name: ftw_level16
     hostname: level16
     ports: ["3236:22"]
-    volumes: ["./flags/level16:/flag:ro", "./tasks/level16.txt:/task/task.txt:ro"]
+    volumes: ["./flags/level16:/flag:ro", "./tasks/level16.txt:/task/task.txt:ro", "./hints/level16.txt:/task/hint.txt:ro", "./info/level16.txt:/task/info.txt:ro"]
 
   level17:
     <<: *level-defaults
@@ -158,7 +158,7 @@ services:
     container_name: ftw_level17
     hostname: level17
     ports: ["3237:22"]
-    volumes: ["./flags/level17:/flag:ro", "./tasks/level17.txt:/task/task.txt:ro"]
+    volumes: ["./flags/level17:/flag:ro", "./tasks/level17.txt:/task/task.txt:ro", "./hints/level17.txt:/task/hint.txt:ro", "./info/level17.txt:/task/info.txt:ro"]
 
   level18:
     <<: *level-defaults
@@ -166,7 +166,7 @@ services:
     container_name: ftw_level18
     hostname: level18
     ports: ["3238:22"]
-    volumes: ["./flags/level18:/flag:ro", "./tasks/level18.txt:/task/task.txt:ro"]
+    volumes: ["./flags/level18:/flag:ro", "./tasks/level18.txt:/task/task.txt:ro", "./hints/level18.txt:/task/hint.txt:ro", "./info/level18.txt:/task/info.txt:ro"]
 
   level19:
     <<: *level-defaults
@@ -174,7 +174,7 @@ services:
     container_name: ftw_level19
     hostname: level19
     ports: ["3239:22"]
-    volumes: ["./flags/level19:/flag:ro", "./tasks/level19.txt:/task/task.txt:ro"]
+    volumes: ["./flags/level19:/flag:ro", "./tasks/level19.txt:/task/task.txt:ro", "./hints/level19.txt:/task/hint.txt:ro", "./info/level19.txt:/task/info.txt:ro"]
 
   level20:
     <<: *level-defaults
@@ -182,7 +182,7 @@ services:
     container_name: ftw_level20
     hostname: level20
     ports: ["3240:22"]
-    volumes: ["./flags/level20:/flag:ro", "./tasks/level20.txt:/task/task.txt:ro"]
+    volumes: ["./flags/level20:/flag:ro", "./tasks/level20.txt:/task/task.txt:ro", "./hints/level20.txt:/task/hint.txt:ro", "./info/level20.txt:/task/info.txt:ro"]
 
   level21:
     <<: *level-defaults
@@ -190,7 +190,7 @@ services:
     container_name: ftw_level21
     hostname: level21
     ports: ["3241:22"]
-    volumes: ["./flags/level21:/flag:ro", "./tasks/level21.txt:/task/task.txt:ro"]
+    volumes: ["./flags/level21:/flag:ro", "./tasks/level21.txt:/task/task.txt:ro", "./hints/level21.txt:/task/hint.txt:ro", "./info/level21.txt:/task/info.txt:ro"]
 
   level22:
     <<: *level-defaults
@@ -198,7 +198,7 @@ services:
     container_name: ftw_level22
     hostname: level22
     ports: ["3242:22"]
-    volumes: ["./flags/level22:/flag:ro", "./tasks/level22.txt:/task/task.txt:ro"]
+    volumes: ["./flags/level22:/flag:ro", "./tasks/level22.txt:/task/task.txt:ro", "./hints/level22.txt:/task/hint.txt:ro", "./info/level22.txt:/task/info.txt:ro"]
 
   level23:
     <<: *level-defaults
@@ -206,7 +206,7 @@ services:
     container_name: ftw_level23
     hostname: level23
     ports: ["3243:22"]
-    volumes: ["./flags/level23:/flag:ro", "./tasks/level23.txt:/task/task.txt:ro"]
+    volumes: ["./flags/level23:/flag:ro", "./tasks/level23.txt:/task/task.txt:ro", "./hints/level23.txt:/task/hint.txt:ro", "./info/level23.txt:/task/info.txt:ro"]
 
   level24:
     <<: *level-defaults
@@ -214,7 +214,7 @@ services:
     container_name: ftw_level24
     hostname: level24
     ports: ["3244:22"]
-    volumes: ["./flags/level24:/flag:ro", "./tasks/level24.txt:/task/task.txt:ro"]
+    volumes: ["./flags/level24:/flag:ro", "./tasks/level24.txt:/task/task.txt:ro", "./hints/level24.txt:/task/hint.txt:ro", "./info/level24.txt:/task/info.txt:ro"]
 
   level25:
     <<: *level-defaults
@@ -222,7 +222,7 @@ services:
     container_name: ftw_level25
     hostname: level25
     ports: ["3245:22"]
-    volumes: ["./flags/level25:/flag:ro", "./tasks/level25.txt:/task/task.txt:ro"]
+    volumes: ["./flags/level25:/flag:ro", "./tasks/level25.txt:/task/task.txt:ro", "./hints/level25.txt:/task/hint.txt:ro", "./info/level25.txt:/task/info.txt:ro"]
 
   level26:
     <<: *level-defaults
@@ -230,7 +230,7 @@ services:
     container_name: ftw_level26
     hostname: level26
     ports: ["3246:22"]
-    volumes: ["./flags/level26:/flag:ro", "./tasks/level26.txt:/task/task.txt:ro"]
+    volumes: ["./flags/level26:/flag:ro", "./tasks/level26.txt:/task/task.txt:ro", "./hints/level26.txt:/task/hint.txt:ro", "./info/level26.txt:/task/info.txt:ro"]
 
   level27:
     <<: *level-defaults
@@ -238,7 +238,7 @@ services:
     container_name: ftw_level27
     hostname: level27
     ports: ["3247:22"]
-    volumes: ["./flags/level27:/flag:ro", "./tasks/level27.txt:/task/task.txt:ro"]
+    volumes: ["./flags/level27:/flag:ro", "./tasks/level27.txt:/task/task.txt:ro", "./hints/level27.txt:/task/hint.txt:ro", "./info/level27.txt:/task/info.txt:ro"]
 
   level28:
     <<: *level-defaults
@@ -246,7 +246,7 @@ services:
     container_name: ftw_level28
     hostname: level28
     ports: ["3248:22"]
-    volumes: ["./flags/level28:/flag:ro", "./tasks/level28.txt:/task/task.txt:ro"]
+    volumes: ["./flags/level28:/flag:ro", "./tasks/level28.txt:/task/task.txt:ro", "./hints/level28.txt:/task/hint.txt:ro", "./info/level28.txt:/task/info.txt:ro"]
 
   level29:
     <<: *level-defaults
@@ -254,7 +254,7 @@ services:
     container_name: ftw_level29
     hostname: level29
     ports: ["3249:22"]
-    volumes: ["./flags/level29:/flag:ro", "./tasks/level29.txt:/task/task.txt:ro"]
+    volumes: ["./flags/level29:/flag:ro", "./tasks/level29.txt:/task/task.txt:ro", "./hints/level29.txt:/task/hint.txt:ro", "./info/level29.txt:/task/info.txt:ro"]
 
   level30:
     <<: *level-defaults
@@ -262,7 +262,7 @@ services:
     container_name: ftw_level30
     hostname: level30
     ports: ["3250:22"]
-    volumes: ["./flags/level30:/flag:ro", "./tasks/level30.txt:/task/task.txt:ro"]
+    volumes: ["./flags/level30:/flag:ro", "./tasks/level30.txt:/task/task.txt:ro", "./hints/level30.txt:/task/hint.txt:ro", "./info/level30.txt:/task/info.txt:ro"]
 
   level31:
     <<: *level-defaults
@@ -270,7 +270,7 @@ services:
     container_name: ftw_level31
     hostname: level31
     ports: ["3251:22"]
-    volumes: ["./flags/level31:/flag:ro", "./tasks/level31.txt:/task/task.txt:ro"]
+    volumes: ["./flags/level31:/flag:ro", "./tasks/level31.txt:/task/task.txt:ro", "./hints/level31.txt:/task/hint.txt:ro", "./info/level31.txt:/task/info.txt:ro"]
 
   level32:
     <<: *level-defaults
@@ -278,7 +278,7 @@ services:
     container_name: ftw_level32
     hostname: level32
     ports: ["3252:22"]
-    volumes: ["./flags/level32:/flag:ro", "./tasks/level32.txt:/task/task.txt:ro"]
+    volumes: ["./flags/level32:/flag:ro", "./tasks/level32.txt:/task/task.txt:ro", "./hints/level32.txt:/task/hint.txt:ro", "./info/level32.txt:/task/info.txt:ro"]
 
   level33:
     <<: *level-defaults
@@ -286,7 +286,7 @@ services:
     container_name: ftw_level33
     hostname: level33
     ports: ["3253:22"]
-    volumes: ["./flags/level33:/flag:ro", "./tasks/level33.txt:/task/task.txt:ro"]
+    volumes: ["./flags/level33:/flag:ro", "./tasks/level33.txt:/task/task.txt:ro", "./hints/level33.txt:/task/hint.txt:ro", "./info/level33.txt:/task/info.txt:ro"]
 
 networks:
   ftw:

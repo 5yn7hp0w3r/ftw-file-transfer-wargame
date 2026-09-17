@@ -1,0 +1,2 @@
+the standard-library module urllib.request can open a URL —
+no third-party dependencies needed.

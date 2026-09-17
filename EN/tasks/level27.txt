@@ -10,8 +10,8 @@ Available to you: printf  (from coreutils)
 
 GOAL: expand the octals back into text (password for level28).
 
-Hint: printf treats \NNN in the FORMAT STRING as an octal byte:
-      printf "$(...file contents here...)"
+Need help? Check hint.txt
+Curious how it works? Check info.txt
 
 Next:  ssh level28@localhost -p 3248
 ============================================================

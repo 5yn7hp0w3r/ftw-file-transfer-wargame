@@ -10,8 +10,8 @@ File  http://fileserver/level15/next.uu  is uuencoded (it carries a
 
 GOAL: download and decode, read the password for level16.
 
-Hint: uudecode parses the "begin ... end" header itself and recreates
-      the file under its original name. From the sharutils package.
+Need help? Check hint.txt
+Curious how it works? Check info.txt
 
 Next:  ssh level16@localhost -p 3236
 ============================================================

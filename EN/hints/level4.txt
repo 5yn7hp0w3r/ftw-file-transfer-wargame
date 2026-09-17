@@ -1,0 +1,3 @@
+a special file like "/inet/tcp/0/<host>/<port>" plus the
+two-way |& operator. The reply carries HTTP headers — the
+password sits below the first blank line.

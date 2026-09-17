@@ -1,0 +1,2 @@
+pipe the receiver (nc) into the unpacker (tar); tar can read an
+archive from stdin.

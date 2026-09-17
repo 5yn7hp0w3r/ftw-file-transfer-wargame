@@ -1,0 +1,14 @@
+── socat ─────────────────────────────────────────────────
+socat = "netcat on steroids". It connects two *addresses* and
+pumps bytes between them — and it understands far more address
+types than nc:
+
+  TCP / TCP-LISTEN   UDP        OPEN:file        EXEC:'cmd'
+  PTY (real ttys)    UNIX-*     OPENSSL / OPENSSL-LISTEN
+
+  socat - TCP:host:4450                 fetch to stdout
+  socat TCP-LISTEN:4450,reuseaddr,fork OPEN:file,rdonly
+
+fork handles multiple clients; reuseaddr avoids "address in
+use". socat gives fully-interactive TTY reverse shells and
+encrypted relays that nc can't do alone.

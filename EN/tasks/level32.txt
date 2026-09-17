@@ -10,5 +10,7 @@ all up to you.
 
 Clear it — and you're at the finale.
 
+(info.txt has the deep-dive — read it once you've cracked this.)
+
 Next:  ssh level33@localhost -p 3253
 ============================================================

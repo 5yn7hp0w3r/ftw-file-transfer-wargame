@@ -7,8 +7,8 @@ listens on a TLS socket on port 4448 (raised with ncat --ssl).
 
 GOAL: connect over SSL and grab the password for level14.
 
-Hint: the client ncat also speaks --ssl. A self-signed certificate
-      warning is expected.
+Need help? Check hint.txt
+Curious how it works? Check info.txt
 
 Next:  ssh level14@localhost -p 3234
 ============================================================

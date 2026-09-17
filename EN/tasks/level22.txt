@@ -9,7 +9,8 @@ Available to you: bunzip2 / bzip2
 
 GOAL: download and decompress the stream (password for level23).
 
-Hint: bunzip2 reads bzip2 from stdin (just like gunzip reads gzip).
+Need help? Check hint.txt
+Curious how it works? Check info.txt
 
 Next:  ssh level23@localhost -p 3243
 ============================================================

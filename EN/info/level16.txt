@@ -1,0 +1,12 @@
+── XOR obfuscation ───────────────────────────────────────
+XOR each byte with a key byte. Its magic property is that it's
+its own inverse: (b ^ k) ^ k == b. Encrypt and decrypt are the
+same operation — cheap and everywhere in malware/loaders.
+
+  single-byte key: only 256 possibilities → brute-forceable
+  (decrypt with every key, keep the printable/known result).
+
+It is obfuscation, NOT encryption: no key management, trivially
+broken (frequency analysis, known-plaintext, key reuse). Often
+stacked with base64 so the raw XOR bytes survive text channels.
+  cat blob | python3 -c 'import sys;sys.stdout.buffer.write(bytes(b^0x42 for b in sys.stdin.buffer.read()))'

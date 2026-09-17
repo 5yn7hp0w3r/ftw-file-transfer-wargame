@@ -1,0 +1,2 @@
+basenc has --base32 / --base16 / --base64url, each with -d.
+Remove them in reverse order of how they were applied.

@@ -1,0 +1,2 @@
+each can read a URL as a string —
+perl: LWP::Simple ·  php: file_get_contents ·  ruby: open-uri.

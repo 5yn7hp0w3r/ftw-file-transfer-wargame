@@ -1,0 +1,12 @@
+── strings & carving (GHOST) ─────────────────────────────
+Data is often hidden in plain sight inside a bigger binary
+blob. `strings` pulls out runs of printable characters so you
+can skim megabytes of noise for the interesting bit.
+
+  strings file                 printable runs (>=4 by default)
+  strings -n 8 file            longer runs only
+  grep -a PATTERN file         grep treats binary as text
+  binwalk file                 find embedded files/archives
+
+This is bread-and-butter for firmware analysis, malware triage,
+forensics and CTF stego — the flag is rarely alone.

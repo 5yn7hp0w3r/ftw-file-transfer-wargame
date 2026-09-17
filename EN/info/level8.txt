@@ -1,0 +1,13 @@
+── base64 ────────────────────────────────────────────────
+Base64 maps arbitrary bytes onto 64 printable ASCII chars
+(A–Z a–z 0–9 + /), 3 bytes → 4 chars, padded with '='. It is
+ENCODING, not encryption — anyone can decode it.
+
+Why send a binary as base64? Raw channels mangle bytes: NULs,
+CR/LF translation, telnet escapes, "text mode" transfers. Wrap
+in base64 and the channel only ever sees safe text.
+
+  base64 file        encode
+  base64 -d          decode
+Cost: ~33% size overhead. Everywhere: email (MIME), data URIs,
+JWTs, HTTP Basic auth, cert PEM blocks.

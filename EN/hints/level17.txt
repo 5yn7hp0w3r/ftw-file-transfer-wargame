@@ -1,0 +1,2 @@
+open http://fileserver/level17/ with curl to see the chunk list.
+They join with a plain cat in name order (part.00, part.01, ...).

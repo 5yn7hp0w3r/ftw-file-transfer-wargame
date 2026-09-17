@@ -1,0 +1,2 @@
+scp copies over SSH just like cp copies locally:
+scpuser@fileserver:level1.txt  ->  here.  ( man scp / sftp )

@@ -1,0 +1,13 @@
+── busybox (GHOST) ───────────────────────────────────────
+busybox is a single binary that bundles hundreds of stripped-
+down Unix tools as "applets" — the backbone of routers, IoT and
+minimal/rescue systems. When curl, wget and python are gone,
+busybox is often the only thing that can still reach the net.
+
+  busybox --list           every applet it provides
+  busybox wget -qO- URL    HTTP GET
+  busybox nc host port     netcat
+  busybox httpd -p 80      tiny web server
+
+Enumeration mindset: don't assume tools are missing — ask what
+one multi-tool binary can still do for you.

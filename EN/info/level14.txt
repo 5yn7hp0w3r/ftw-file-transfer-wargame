@@ -1,0 +1,13 @@
+── sha256 / integrity ────────────────────────────────────
+A cryptographic hash maps any input to a fixed 256-bit digest.
+Same bytes → same hash; one flipped bit → completely different
+hash. You verify a transfer arrived intact by comparing hashes
+computed on both ends.
+
+  sha256sum file             compute
+  sha256sum -c file.sha256   verify against a checksum file
+
+Integrity ≠ authenticity: a hash proves "not corrupted", not
+"from who you think" — for that you need signatures or HMAC.
+MD5/SHA-1 are broken for security (collisions); use SHA-256+.
+Windows: certutil -hashfile / Get-FileHash.

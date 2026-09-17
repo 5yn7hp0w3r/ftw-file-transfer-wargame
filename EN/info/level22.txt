@@ -1,0 +1,11 @@
+── bzip2 ─────────────────────────────────────────────────
+bzip2 compresses in blocks using the Burrows–Wheeler transform
+plus move-to-front and Huffman coding. It usually beats gzip on
+ratio, at the cost of being slower and more memory-hungry.
+
+  bzip2 file        -> file.bz2
+  bunzip2 file.bz2  or:  bzcat file.bz2
+
+Pipes like the rest:  curl -s url | bunzip2
+Between gzip (fast) and xz (smallest), bzip2 is the middle
+ground you still see on older packages and mirrors.

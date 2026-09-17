@@ -1,0 +1,3 @@
+nc speaks UDP via -u. The server must first "see" your datagram
+— send something (even a blank line) so it learns your address,
+then receive the reply. A timeout (-w) keeps you from hanging.

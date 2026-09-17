@@ -9,7 +9,8 @@ File  http://fileserver/level10/next.hex  is a hex dump.
 
 GOAL: download and turn it back into bytes (password for level11).
 
-Hint: xxd can reverse a plain hex dump — plain + revert. ( xxd -h )
+Need help? Check hint.txt
+Curious how it works? Check info.txt
 
 Next:  ssh level11@localhost -p 3231
 ============================================================

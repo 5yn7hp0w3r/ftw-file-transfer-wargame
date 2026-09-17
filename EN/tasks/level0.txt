@@ -9,8 +9,8 @@ that file is visible). Inside is the password for level1.
 
 GOAL: copy that file here and read it.
 
-Hint: scp copies over SSH just like cp copies locally:
-      scpuser@fileserver:level1.txt  ->  here.  ( man scp / sftp )
+Need help? Check hint.txt
+Curious how it works? Check info.txt
 
 Next (on YOUR host, a new terminal):
       ssh level1@localhost -p 3221

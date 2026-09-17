@@ -65,7 +65,13 @@ loop 'ncat -l 0.0.0.0 4445 --send-only < "$F/level7" >/dev/null 2>&1' &
 loop 'tar czf - -C /srv pack 2>/dev/null | ncat -l 0.0.0.0 4446 --send-only >/dev/null 2>&1' &
 loop 'say 9  | base64 | ncat -l 0.0.0.0 4447 --send-only >/dev/null 2>&1' &
 loop 'say 14 | ncat --ssl -l 0.0.0.0 4448 --send-only >/dev/null 2>&1' &
-loop 'say 19 | ncat -u -l 0.0.0.0 4449 --send-only >/dev/null 2>&1' &
+# level18 UDP — persistent responder (UDP has no retransmit; a respawn loop races)
+say 19 > /srv/udp19
+python3 -c 'import socket
+s=socket.socket(socket.AF_INET,socket.SOCK_DGRAM);s.bind(("0.0.0.0",4449))
+d=open("/srv/udp19","rb").read()
+while 1:
+    _,a=s.recvfrom(65535);s.sendto(d,a)' >/dev/null 2>&1 &
 loop 'socat -u OPEN:/srv/socatflag TCP-LISTEN:4450,reuseaddr >/dev/null 2>&1' &
 loop 'say 30 | ncat -l 0.0.0.0 9029 --send-only >/dev/null 2>&1' &
 loop 'ncat -l 0.0.0.0 9032 --send-only < /srv/ghost5.bin >/dev/null 2>&1' &

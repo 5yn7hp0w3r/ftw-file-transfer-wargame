@@ -1,0 +1,15 @@
+── recognising encodings (GHOST) ─────────────────────────
+Half of decoding is identifying WHAT you're looking at. Tells:
+
+  charset A-Za-z0-9+/ with '=' padding   → base64
+  A-Z2-7 with '='                         → base32
+  only 0-9a-f, even length                → hex
+  '-'/'_' instead of '+'/'/'              → base64url
+  high entropy, no structure              → compressed/encrypted
+
+Tools to interrogate a blob:
+  file -            guess type from magic bytes
+  xxd | head        eyeball the first bytes / header
+  ent / entropy     randomness (packed vs plaintext)
+
+Guess, decode, sanity-check the output, iterate.

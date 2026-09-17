@@ -1,0 +1,14 @@
+── Python: urllib.request ────────────────────────────────
+Python is on nearly every Linux server, and its standard
+library can fetch over HTTP with zero third-party installs.
+
+  urllib.request.urlopen(url).read()      # bytes in memory
+  urllib.request.urlretrieve(url, path)   # straight to disk
+
+Notes:
+  * ssl.create_default_context() controls cert checking.
+  * For anything real, the 'requests' lib is nicer — but it
+    isn't stdlib, so urllib is the "always there" fallback.
+  * Same idea in Python 2: urllib2 / urllib.urlretrieve.
+
+This is the classic "no curl? no wget? there's python" move.

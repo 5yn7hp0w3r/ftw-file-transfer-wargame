@@ -9,8 +9,8 @@ Channel key: transfer
 
 GOAL: download and decrypt (password for level13).
 
-Hint: openssl enc can decrypt (-d) with the same parameters used to
-      encrypt: algorithm aes-256-cbc, pbkdf2, base64 input, key via -k.
+Need help? Check hint.txt
+Curious how it works? Check info.txt
 
 Next:  ssh level13@localhost -p 3233
 ============================================================

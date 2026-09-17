@@ -1,0 +1,12 @@
+── zlib (raw DEFLATE) ────────────────────────────────────
+Same DEFLATE algorithm as gzip, but with zlib's tiny 2-byte
+header + Adler-32 checksum instead of the gzip wrapper. That
+difference matters: `gunzip` refuses raw zlib streams.
+
+Where it hides: PNG chunks, PDF stream objects, the ZIP format,
+HTTP "deflate" encoding, many binary protocols and game saves.
+
+  python3 -c 'import zlib,sys;sys.stdout.buffer.write(zlib.decompress(sys.stdin.buffer.read()))'
+  openssl zlib -d        (if built with zlib support)
+
+Recognising "this blob is zlib, not gzip" is half the battle.

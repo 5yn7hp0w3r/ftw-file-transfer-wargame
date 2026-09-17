@@ -1,0 +1,12 @@
+── gzip / DEFLATE ────────────────────────────────────────
+gzip оборачивает алгоритм DEFLATE (LZ77 + коды Хаффмана) в
+небольшой заголовок и CRC. Дефолт «сделать меньше на проводе»
+повсюду: HTTP Content-Encoding, .tar.gz, логи.
+
+  gzip file          -> file.gz
+  gunzip file.gz     или:  zcat file.gz     (в stdout)
+  gzip -9            максимум   -1 быстрее
+
+Хорошо пайпится:
+  curl -s url | gunzip
+Родственник — zlib (тот же DEFLATE, другая обёртка — дальше).

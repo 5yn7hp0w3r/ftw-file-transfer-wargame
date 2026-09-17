@@ -10,9 +10,8 @@ bytes. XOR key: 0x42
 
 GOAL: strip base64, undo the XOR, read the password for level17.
 
-Hint: XOR is reversible with the same key (a ^ k ^ k == a). First
-      base64 -d, then walk the bytes ^ 0x42 (a python3 one-liner is
-      handy).
+Need help? Check hint.txt
+Curious how it works? Check info.txt
 
 Next:  ssh level17@localhost -p 3237
 ============================================================

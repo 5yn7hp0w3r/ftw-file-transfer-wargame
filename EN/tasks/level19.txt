@@ -9,9 +9,8 @@ fileserver serves a file on TCP port 4450.
 
 GOAL: grab the password for level20 using socat.
 
-Hint: socat connects two addresses. One end is stdout (-), the other
-      is TCP:<host>:<port>. Route the server's stream to your screen
-      or a file.
+Need help? Check hint.txt
+Curious how it works? Check info.txt
 
 Next:  ssh level20@localhost -p 3240
 ============================================================

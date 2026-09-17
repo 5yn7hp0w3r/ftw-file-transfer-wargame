@@ -1,0 +1,2 @@
+printf treats \NNN in the FORMAT STRING as an octal byte:
+printf "$(...file contents here...)"

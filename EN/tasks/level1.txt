@@ -8,7 +8,8 @@ You have curl and wget, but no scp/python.
 GOAL: fetch  http://fileserver/level1/next.txt  — the password
       for level2 is inside.
 
-Hint: both tools download from a URL. ( curl --help / man wget )
+Need help? Check hint.txt
+Curious how it works? Check info.txt
 
 Next:  ssh level2@localhost -p 3222
 ============================================================

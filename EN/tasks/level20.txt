@@ -10,7 +10,8 @@ Available to you: python3
 
 GOAL: download and decode (password for level21).
 
-Hint: base64.b85decode() in the python standard library.
+Need help? Check hint.txt
+Curious how it works? Check info.txt
 
 Next:  ssh level21@localhost -p 3241
 ============================================================

@@ -1,0 +1,3 @@
+у каждого есть способ прочитать URL как строку —
+perl: LWP::Simple ·  php: file_get_contents ·
+ruby: open-uri.

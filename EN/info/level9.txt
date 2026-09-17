@@ -1,0 +1,11 @@
+── base32 ────────────────────────────────────────────────
+Base32 (RFC 4648) uses 32 symbols: A–Z and 2–7. It packs 5
+bytes into 8 characters — less dense than base64 (~60% over-
+head) but with real advantages:
+
+  * case-insensitive — survives systems that upper/lower text
+  * no + / that break URLs, filenames, DNS labels
+  * hand-transcribable, works in QR codes and voice
+
+You'll see it in TOTP/2FA secrets, onion addresses, and DNS-
+based exfiltration. Decode with `base32 -d` (or basenc).

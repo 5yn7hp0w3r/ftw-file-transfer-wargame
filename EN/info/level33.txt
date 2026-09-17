@@ -1,0 +1,14 @@
+── you finished. where to go next ───────────────────────
+You practised the full spectrum of moving data: transports,
+encodings, compression, crypto, and enumeration under
+constraints. That "what's actually on this box, and what can it
+still do?" instinct is the real takeaway.
+
+Keep going:
+  * GTFOBins        — unix binaries turned into capabilities
+  * LOLBAS          — the Windows equivalent
+  * OverTheWire     — Bandit and beyond
+  * HackTheBox / picoCTF — apply it against real targets
+  * HTB Academy "File Transfers" — the module this lab echoes
+
+Rebuild your own: every technique here is a few lines of shell.

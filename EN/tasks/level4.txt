@@ -8,9 +8,8 @@ No usual downloaders. But gawk can open a TCP socket itself
 GOAL: manually GET /level4/next.txt from fileserver:80 and pull out
       the password for level5.
 
-Hint: a special file like "/inet/tcp/0/<host>/<port>" plus the
-      two-way |& operator. The reply carries HTTP headers — the
-      password sits below the first blank line.
+Need help? Check hint.txt
+Curious how it works? Check info.txt
 
 Next:  ssh level5@localhost -p 3225
 ============================================================

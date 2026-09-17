@@ -1,0 +1,12 @@
+── UDP with netcat ───────────────────────────────────────
+UDP is connectionless: no handshake, no delivery guarantees,
+no ordering. A UDP "listener" doesn't know a client exists
+until it receives the first datagram — which learns the peer's
+address so it can reply.
+
+  nc -u -lvnp 4444        UDP listen
+  nc -u host 4444         UDP client (send something first!)
+
+Why bother: firewalls that block inbound TCP sometimes pass
+UDP (DNS/53, NTP/123). Downsides: packets can drop or reorder,
+so it's unreliable for big files without your own retry logic.

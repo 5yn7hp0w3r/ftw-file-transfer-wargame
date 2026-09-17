@@ -1,0 +1,12 @@
+── gzip / DEFLATE ────────────────────────────────────────
+gzip wraps the DEFLATE algorithm (LZ77 + Huffman coding) with
+a small header and CRC. It's the default "make it smaller on
+the wire" everywhere: HTTP Content-Encoding, .tar.gz, logs.
+
+  gzip file          -> file.gz
+  gunzip file.gz     or:  zcat file.gz     (decompress to stdout)
+  gzip -9            max compression   -1 fastest
+
+Streaming-friendly, so it pipes cleanly:
+  curl -s url | gunzip
+Related: zlib (same DEFLATE, different wrapper — see later).

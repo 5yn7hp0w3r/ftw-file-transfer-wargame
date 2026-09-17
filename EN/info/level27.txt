@@ -1,0 +1,12 @@
+── octal / escape sequences ──────────────────────────────
+Bytes can hide as backslash escapes. Octal \NNN (and hex \xHH)
+sequences are a favourite in shell obfuscation because printf
+expands them right back into raw bytes.
+
+  printf '\143\141\164'        ->  cat        (format string!)
+  printf '%b' '\0143'          octal via %b needs a leading 0
+  echo -e '\x63\x61\x74'       hex escapes
+
+Note the two printf modes: escapes in the FORMAT string vs in a
+%b argument behave differently. The same idea powers "\x41\x41"
+shellcode and encoded one-liners you'll see in malware.

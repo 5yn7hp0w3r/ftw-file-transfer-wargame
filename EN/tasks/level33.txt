@@ -23,4 +23,6 @@ you moved a file across the wire with every trick in the book.
     ____/_____________________________________________\____
               you climbed every one of them.  keep going.
 
+Every level ships an info.txt — reread them to cement what you learned.
+
 ============================================================

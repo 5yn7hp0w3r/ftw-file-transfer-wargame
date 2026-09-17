@@ -1,0 +1,14 @@
+── uuencode / uudecode ───────────────────────────────────
+A pre-base64 way to push binaries through 7-bit text channels
+(email, Usenet, terminals). Encodes 3 bytes into 4 printable
+chars, wrapped in a header/footer:
+
+  begin 644 secret.txt      <- mode + original filename
+  <encoded lines>
+  end
+
+  uuencode file name > out.uu     encode
+  uudecode out.uu                 recreates 'name'
+
+From the sharutils package. Largely historical now, but you
+still meet it in legacy mail flows and old exam boxes.

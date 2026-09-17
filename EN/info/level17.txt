@@ -1,0 +1,12 @@
+── split & reassemble ────────────────────────────────────
+split cuts a file into pieces; cat glues them back. Handy to
+beat upload/size limits, chunk a big exfil across requests, or
+dodge naive DLP that flags one large transfer.
+
+  split -b 1M   file part.     size chunks -> part.aa, part.ab
+  split -n 5    file part.      into 5 pieces
+  split -d      ...             numeric suffixes (part.00 ...)
+  cat part.*                    reassemble (name order matters)
+
+Verify with a hash afterwards (level 14) — order or a missing
+chunk silently corrupts the result.

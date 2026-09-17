@@ -1,0 +1,2 @@
+exec N<>/dev/tcp/<host>/<port> opens a descriptor; write the
+GET request into it, read the reply back.

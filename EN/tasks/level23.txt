@@ -10,7 +10,8 @@ Available to you: xz
 
 GOAL: download and decompress (password for level24).
 
-Hint: xz -d (or unxz) decompresses from stdin.
+Need help? Check hint.txt
+Curious how it works? Check info.txt
 
 Next:  ssh level24@localhost -p 3244
 ============================================================

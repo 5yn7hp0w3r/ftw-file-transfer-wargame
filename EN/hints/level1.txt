@@ -1,0 +1,1 @@
+both tools download from a URL. ( curl --help / man wget )

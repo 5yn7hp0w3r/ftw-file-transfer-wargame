@@ -5,5 +5,7 @@
 fileserver serves a "junk" binary dump. Somewhere in the noise the
 password is hidden. Dig it out of the garbage.
 
+(info.txt has the deep-dive — read it once you've cracked this.)
+
 Next:  ssh level32@localhost -p 3252
 ============================================================

@@ -1,0 +1,12 @@
+── UTF-16 ────────────────────────────────────────────────
+Not everything unreadable is a cipher — sometimes it's just a
+different text encoding. UTF-16 stores each code unit in TWO
+bytes (LE or BE), often with a BOM (FF FE / FE FF) up front.
+In a hex view you'll see a 00 after every ASCII letter.
+
+Windows and PowerShell love UTF-16LE — a common obfuscation is
+a UTF-16 + base64 PowerShell payload (`-EncodedCommand`).
+
+  iconv -f UTF-16LE -t UTF-8 file        transcode
+iconv converts between hundreds of charsets; picking the right
+source encoding is the whole trick.

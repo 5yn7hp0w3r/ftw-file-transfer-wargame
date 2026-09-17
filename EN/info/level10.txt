@@ -1,0 +1,13 @@
+── hex encoding ──────────────────────────────────────────
+The simplest byte-to-text scheme: each byte becomes two hex
+digits (0–9 a–f). 100% size overhead, but trivially readable
+and copy-pasteable by hand — great for small blobs and for
+eyeballing binary data.
+
+  xxd file           annotated hex + ASCII dump
+  xxd -p             plain hex, no offsets/ASCII
+  xxd -r -p          reverse plain hex back to bytes
+  od -An -tx1        alternative dump
+  echo 4142 | xxd -r -p   ->  AB
+
+Same idea as \xHH escapes in shells and languages.

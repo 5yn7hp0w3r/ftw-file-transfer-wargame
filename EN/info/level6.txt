@@ -1,0 +1,13 @@
+── netcat (nc) ───────────────────────────────────────────
+The "TCP/IP swiss army knife". One side listens, the other
+connects; netcat doesn't care who is attacker or victim, only
+who initiates.
+
+  nc -lvnp 4444        listen: -l listen -v verbose
+                       -n no DNS -p port
+  nc host 4444         connect (client)
+  -N / -q 0            close after EOF (version-dependent)
+
+Flavours differ: OpenBSD nc, GNU traditional, busybox nc, and
+nmap's ncat — flags and features vary, so check `nc -h`.
+The bedrock of ad-hoc transfers, bind/reverse shells, scans.

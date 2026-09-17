@@ -9,7 +9,8 @@ Available to you: basenc  (from coreutils)
 
 GOAL: download and decode (password for level22).
 
-Hint: basenc has a --z85 flag (and -d to decode).
+Need help? Check hint.txt
+Curious how it works? Check info.txt
 
 Next:  ssh level22@localhost -p 3242
 ============================================================

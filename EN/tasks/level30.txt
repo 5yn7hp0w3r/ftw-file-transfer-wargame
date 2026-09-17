@@ -5,5 +5,7 @@
 You'll find the file (inspect what fileserver serves). But to the eye
 it's gibberish. Work out the encoding and unwrap it. Password inside.
 
+(info.txt has the deep-dive — read it once you've cracked this.)
+
 Next:  ssh level31@localhost -p 3251
 ============================================================

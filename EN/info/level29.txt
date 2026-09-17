@@ -1,0 +1,12 @@
+── port discovery (GHOST) ────────────────────────────────
+Services don't have to sit on well-known ports. Finding a
+listener on a high, "random" port is basic recon — and you can
+do it without nmap:
+
+  nc -zv host 9000-9100          -z scan (no data) -v report
+  for p in $(seq 9000 9100); do (echo >/dev/tcp/host/$p) \
+      2>/dev/null && echo open $p; done          # pure bash
+
+Real engagements: nmap / masscan / rustscan sweep ports fast.
+The lesson is the habit — when something "should be there but
+isn't on 80", go looking for where it actually lives.

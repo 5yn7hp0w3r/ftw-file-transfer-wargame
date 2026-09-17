@@ -7,9 +7,8 @@ whoever connects.
 
 GOAL: connect, save what you get, read the password for level7.
 
-Hint: rule of thumb — whoever LISTENS on a port is the server; here
-      fileserver listens, you are the client. Redirect nc's output
-      into a file.
+Need help? Check hint.txt
+Curious how it works? Check info.txt
 
 Next:  ssh level7@localhost -p 3227
 ============================================================

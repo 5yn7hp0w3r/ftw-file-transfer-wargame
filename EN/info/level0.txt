@@ -1,0 +1,15 @@
+── scp / SSH file copy ───────────────────────────────────
+scp copies files over an SSH connection: same auth, same
+encryption, no extra service to stand up. In modern OpenSSH
+(9+) scp actually rides the SFTP subsystem under the hood.
+
+Key flags:
+  -r    copy a directory recursively
+  -P    non-standard SSH port (capital P; ssh uses -p)
+  -i    identity (private key) file
+  -O    force the legacy SCP protocol instead of SFTP
+
+Why it matters: on a pentest, one set of reused SSH creds
+turns into arbitrary file read/write across hosts. SFTP
+chroots (like scpuser here) are the standard way to hand out
+file access without handing out a shell.

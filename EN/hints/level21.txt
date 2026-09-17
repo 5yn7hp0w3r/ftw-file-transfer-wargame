@@ -1,0 +1,1 @@
+basenc has a --z85 flag (and -d to decode).

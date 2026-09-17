@@ -1,0 +1,12 @@
+── layered encodings (basenc) ────────────────────────────
+Real obfuscation rarely stops at one layer — it stacks them,
+sometimes mixing schemes, to slow analysts down. The skill is
+recognising each layer and peeling in the right (reverse) order.
+
+basenc is one tool for many base encodings:
+  --base64 / --base64url   --base32 / --base32hex
+  --base16 (hex)           --z85            (-d to decode)
+
+Alphabet is your tell: only 0-9A-F ⇒ base16; A-Z2-7 ⇒ base32;
+'-' '_' ⇒ base64url; trailing '=' ⇒ base64/32 padding. Identify,
+decode, look at what falls out, repeat.

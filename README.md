@@ -30,6 +30,10 @@ ssh level0@localhost -p 3220   # starting password: start-here
 cat task.txt                   # each level's brief is always in ~/task.txt
 ```
 
+Each level ships three files in your home dir: **`task.txt`** (the brief),
+**`hint.txt`** (an opt-in nudge), and **`info.txt`** (a deep-dive on the tool used).
+
+
 Solve the level, read the password it reveals, move on. A level's SSH port is
 **`3220 + level number`** (level7 → 3227, level33 → 3253). Tear down with `docker compose down`.
 Fresh flags anytime (no rebuild): `./gen-flags.sh && docker compose restart`.

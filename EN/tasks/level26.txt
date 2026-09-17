@@ -12,8 +12,8 @@ Available to you: basenc  (from coreutils)
 
 GOAL: peel all three layers in order (password for level27).
 
-Hint: basenc has --base32 / --base16 / --base64url, each with -d.
-      Remove them in reverse order of how they were applied.
+Need help? Check hint.txt
+Curious how it works? Check info.txt
 
 Next:  ssh level27@localhost -p 3247
 ============================================================

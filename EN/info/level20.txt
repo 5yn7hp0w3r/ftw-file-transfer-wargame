@@ -1,0 +1,12 @@
+── base85 / Ascii85 ──────────────────────────────────────
+Base85 encodes 4 bytes into 5 printable chars, so overhead is
+only ~25% — noticeably tighter than base64's ~33%. It uses an
+85-character alphabet (enough that 85^5 > 256^4).
+
+Variants: Adobe Ascii85 (PDF), btoa, RFC 1924, ZeroMQ Z85.
+You'll meet it in PDF streams, PostScript, git binary diffs.
+
+  python3 -c 'import base64,sys;sys.stdout.buffer.write(base64.b85encode(sys.stdin.buffer.read()))'
+  ...b85decode(...)  to reverse
+
+Denser text encoding when every byte on the wire counts.

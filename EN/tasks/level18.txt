@@ -11,9 +11,8 @@ the file.
 
 GOAL: get the password for level19 over UDP.
 
-Hint: nc speaks UDP via -u. The server must first "see" your datagram
-      — send something (even a blank line) so it learns your address,
-      then receive the reply. A timeout (-w) keeps you from hanging.
+Need help? Check hint.txt
+Curious how it works? Check info.txt
 
 Next:  ssh level19@localhost -p 3239
 ============================================================

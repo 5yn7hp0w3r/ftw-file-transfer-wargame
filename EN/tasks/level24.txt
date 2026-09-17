@@ -10,7 +10,8 @@ Available to you: python3
 
 GOAL: download and decompress (password for level25).
 
-Hint: zlib.decompress() in the python standard library.
+Need help? Check hint.txt
+Curious how it works? Check info.txt
 
 Next:  ssh level25@localhost -p 3245
 ============================================================

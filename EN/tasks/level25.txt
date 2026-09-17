@@ -11,7 +11,8 @@ Available to you: iconv
 
 GOAL: transcode to UTF-8 and read it (password for level26).
 
-Hint: iconv -f UTF-16LE -t UTF-8
+Need help? Check hint.txt
+Curious how it works? Check info.txt
 
 Next:  ssh level26@localhost -p 3246
 ============================================================

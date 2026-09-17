@@ -10,5 +10,7 @@ over HTTP. The usual curl/wget were not given to you.
 Look around: what is even installed on this host? What can reach the
 network? Find the tool — and you'll find the path to the password.
 
+(info.txt has the deep-dive — read it once you've cracked this.)
+
 Next:  ssh level29@localhost -p 3249
 ============================================================

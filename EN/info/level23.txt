@@ -1,0 +1,12 @@
+── xz / LZMA ─────────────────────────────────────────────
+xz wraps LZMA2 — currently the best general-purpose ratio of
+the common tools, which is why the Linux kernel and many
+distros ship .xz packages. Trade-off: slow, RAM-heavy compress
+(decompress is cheap).
+
+  xz file          -> file.xz
+  unxz file.xz     or:  xz -d file.xz   ·   xzcat file.xz
+  xz -9e           extreme compression
+
+Related formats share the family: lzma, lzip. When size on the
+wire matters more than CPU, xz wins.

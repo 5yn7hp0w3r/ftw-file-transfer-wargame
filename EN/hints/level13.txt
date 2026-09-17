@@ -1,0 +1,2 @@
+the client ncat also speaks --ssl. A self-signed certificate
+warning is expected.
