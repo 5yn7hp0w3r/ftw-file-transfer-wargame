@@ -1,0 +1,17 @@
+
+============================================================
+ LEVEL 27  —  Octal escape sequences
+============================================================
+Not base — plain old octal codes: every byte as \NNN. A common shell
+obfuscation trick (printf '\143\141\164...').
+
+File  http://fileserver/level27/next.oct  — a string like \NNN\NNN...
+Available to you: printf  (from coreutils)
+
+GOAL: expand the octals back into text (password for level28).
+
+Hint: printf treats \NNN in the FORMAT STRING as an octal byte:
+      printf "$(...file contents here...)"
+
+Next:  ssh level28@localhost -p 3248
+============================================================

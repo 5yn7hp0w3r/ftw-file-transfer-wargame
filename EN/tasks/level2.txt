@@ -1,0 +1,14 @@
+
+============================================================
+ LEVEL 2  —  Python
+============================================================
+curl and wget are gone here. But python3 is present.
+
+GOAL: download  http://fileserver/level2/next.txt  using Python
+      itself (password for level3).
+
+Hint: the standard-library module urllib.request can open a URL —
+      no third-party dependencies needed.
+
+Next:  ssh level3@localhost -p 3223
+============================================================

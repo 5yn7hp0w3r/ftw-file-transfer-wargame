@@ -1,0 +1,293 @@
+# File Transfer Wargame — соревновательная лаба (в духе OverTheWire).
+# Изоляция: каждый контейнер монтирует ТОЛЬКО свой /flag; scpuser сидит в SFTP-chroot.
+# Ч1(0-7) каналы · Ч2(8-14) кодирование · Ч3(15-19) экзотика · Ч4(20-27) сжатие/кодировки · Ч5(28-32) GHOST · 33 финал.
+
+x-level: &level-defaults
+  restart: unless-stopped
+  networks: [ftw]
+  depends_on: [fileserver]
+
+services:
+  fileserver:
+    build: { context: ., dockerfile: Dockerfile.server }
+    container_name: ftwru_fileserver
+    hostname: fileserver
+    restart: unless-stopped
+    volumes: ["./flags:/flags:ro"]
+    networks: [ftw]
+
+  level0:
+    <<: *level-defaults
+    build: { context: ., dockerfile: Dockerfile.level, args: { LEVEL: "0", EXTRA_PKGS: "openssh-client" } }
+    container_name: ftwru_level0
+    hostname: level0
+    ports: ["3220:22"]
+    volumes: ["./flags/level0:/flag:ro", "./tasks/level0.txt:/task/task.txt:ro"]
+
+  level1:
+    <<: *level-defaults
+    build: { context: ., dockerfile: Dockerfile.level, args: { LEVEL: "1", EXTRA_PKGS: "curl wget" } }
+    container_name: ftwru_level1
+    hostname: level1
+    ports: ["3221:22"]
+    volumes: ["./flags/level1:/flag:ro", "./tasks/level1.txt:/task/task.txt:ro"]
+
+  level2:
+    <<: *level-defaults
+    build: { context: ., dockerfile: Dockerfile.level, args: { LEVEL: "2", EXTRA_PKGS: "python3" } }
+    container_name: ftwru_level2
+    hostname: level2
+    ports: ["3222:22"]
+    volumes: ["./flags/level2:/flag:ro", "./tasks/level2.txt:/task/task.txt:ro"]
+
+  level3:
+    <<: *level-defaults
+    build: { context: ., dockerfile: Dockerfile.level, args: { LEVEL: "3", EXTRA_PKGS: "perl libwww-perl php-cli ruby" } }
+    container_name: ftwru_level3
+    hostname: level3
+    ports: ["3223:22"]
+    volumes: ["./flags/level3:/flag:ro", "./tasks/level3.txt:/task/task.txt:ro"]
+
+  level4:
+    <<: *level-defaults
+    build: { context: ., dockerfile: Dockerfile.level, args: { LEVEL: "4", EXTRA_PKGS: "gawk" } }
+    container_name: ftwru_level4
+    hostname: level4
+    ports: ["3224:22"]
+    volumes: ["./flags/level4:/flag:ro", "./tasks/level4.txt:/task/task.txt:ro"]
+
+  level5:
+    <<: *level-defaults
+    build: { context: ., dockerfile: Dockerfile.level, args: { LEVEL: "5", EXTRA_PKGS: "" } }
+    container_name: ftwru_level5
+    hostname: level5
+    ports: ["3225:22"]
+    volumes: ["./flags/level5:/flag:ro", "./tasks/level5.txt:/task/task.txt:ro"]
+
+  level6:
+    <<: *level-defaults
+    build: { context: ., dockerfile: Dockerfile.level, args: { LEVEL: "6", EXTRA_PKGS: "netcat-openbsd" } }
+    container_name: ftwru_level6
+    hostname: level6
+    ports: ["3226:22"]
+    volumes: ["./flags/level6:/flag:ro", "./tasks/level6.txt:/task/task.txt:ro"]
+
+  level7:
+    <<: *level-defaults
+    build: { context: ., dockerfile: Dockerfile.level, args: { LEVEL: "7", EXTRA_PKGS: "netcat-openbsd" } }
+    container_name: ftwru_level7
+    hostname: level7
+    ports: ["3227:22"]
+    volumes: ["./flags/level7:/flag:ro", "./tasks/level7.txt:/task/task.txt:ro"]
+
+  level8:
+    <<: *level-defaults
+    build: { context: ., dockerfile: Dockerfile.level, args: { LEVEL: "8", EXTRA_PKGS: "netcat-openbsd" } }
+    container_name: ftwru_level8
+    hostname: level8
+    ports: ["3228:22"]
+    volumes: ["./flags/level8:/flag:ro", "./tasks/level8.txt:/task/task.txt:ro"]
+
+  level9:
+    <<: *level-defaults
+    build: { context: ., dockerfile: Dockerfile.level, args: { LEVEL: "9", EXTRA_PKGS: "curl" } }
+    container_name: ftwru_level9
+    hostname: level9
+    ports: ["3229:22"]
+    volumes: ["./flags/level9:/flag:ro", "./tasks/level9.txt:/task/task.txt:ro"]
+
+  level10:
+    <<: *level-defaults
+    build: { context: ., dockerfile: Dockerfile.level, args: { LEVEL: "10", EXTRA_PKGS: "curl xxd" } }
+    container_name: ftwru_level10
+    hostname: level10
+    ports: ["3230:22"]
+    volumes: ["./flags/level10:/flag:ro", "./tasks/level10.txt:/task/task.txt:ro"]
+
+  level11:
+    <<: *level-defaults
+    build: { context: ., dockerfile: Dockerfile.level, args: { LEVEL: "11", EXTRA_PKGS: "curl gzip" } }
+    container_name: ftwru_level11
+    hostname: level11
+    ports: ["3231:22"]
+    volumes: ["./flags/level11:/flag:ro", "./tasks/level11.txt:/task/task.txt:ro"]
+
+  level12:
+    <<: *level-defaults
+    build: { context: ., dockerfile: Dockerfile.level, args: { LEVEL: "12", EXTRA_PKGS: "curl openssl" } }
+    container_name: ftwru_level12
+    hostname: level12
+    ports: ["3232:22"]
+    volumes: ["./flags/level12:/flag:ro", "./tasks/level12.txt:/task/task.txt:ro"]
+
+  level13:
+    <<: *level-defaults
+    build: { context: ., dockerfile: Dockerfile.level, args: { LEVEL: "13", EXTRA_PKGS: "ncat" } }
+    container_name: ftwru_level13
+    hostname: level13
+    ports: ["3233:22"]
+    volumes: ["./flags/level13:/flag:ro", "./tasks/level13.txt:/task/task.txt:ro"]
+
+  level14:
+    <<: *level-defaults
+    build: { context: ., dockerfile: Dockerfile.level, args: { LEVEL: "14", EXTRA_PKGS: "curl coreutils" } }
+    container_name: ftwru_level14
+    hostname: level14
+    ports: ["3234:22"]
+    volumes: ["./flags/level14:/flag:ro", "./tasks/level14.txt:/task/task.txt:ro"]
+
+  level15:
+    <<: *level-defaults
+    build: { context: ., dockerfile: Dockerfile.level, args: { LEVEL: "15", EXTRA_PKGS: "curl sharutils" } }
+    container_name: ftwru_level15
+    hostname: level15
+    ports: ["3235:22"]
+    volumes: ["./flags/level15:/flag:ro", "./tasks/level15.txt:/task/task.txt:ro"]
+
+  level16:
+    <<: *level-defaults
+    build: { context: ., dockerfile: Dockerfile.level, args: { LEVEL: "16", EXTRA_PKGS: "curl python3" } }
+    container_name: ftwru_level16
+    hostname: level16
+    ports: ["3236:22"]
+    volumes: ["./flags/level16:/flag:ro", "./tasks/level16.txt:/task/task.txt:ro"]
+
+  level17:
+    <<: *level-defaults
+    build: { context: ., dockerfile: Dockerfile.level, args: { LEVEL: "17", EXTRA_PKGS: "curl" } }
+    container_name: ftwru_level17
+    hostname: level17
+    ports: ["3237:22"]
+    volumes: ["./flags/level17:/flag:ro", "./tasks/level17.txt:/task/task.txt:ro"]
+
+  level18:
+    <<: *level-defaults
+    build: { context: ., dockerfile: Dockerfile.level, args: { LEVEL: "18", EXTRA_PKGS: "netcat-openbsd" } }
+    container_name: ftwru_level18
+    hostname: level18
+    ports: ["3238:22"]
+    volumes: ["./flags/level18:/flag:ro", "./tasks/level18.txt:/task/task.txt:ro"]
+
+  level19:
+    <<: *level-defaults
+    build: { context: ., dockerfile: Dockerfile.level, args: { LEVEL: "19", EXTRA_PKGS: "socat" } }
+    container_name: ftwru_level19
+    hostname: level19
+    ports: ["3239:22"]
+    volumes: ["./flags/level19:/flag:ro", "./tasks/level19.txt:/task/task.txt:ro"]
+
+  level20:
+    <<: *level-defaults
+    build: { context: ., dockerfile: Dockerfile.level, args: { LEVEL: "20", EXTRA_PKGS: "curl python3" } }
+    container_name: ftwru_level20
+    hostname: level20
+    ports: ["3240:22"]
+    volumes: ["./flags/level20:/flag:ro", "./tasks/level20.txt:/task/task.txt:ro"]
+
+  level21:
+    <<: *level-defaults
+    build: { context: ., dockerfile: Dockerfile.level, args: { LEVEL: "21", EXTRA_PKGS: "curl coreutils" } }
+    container_name: ftwru_level21
+    hostname: level21
+    ports: ["3241:22"]
+    volumes: ["./flags/level21:/flag:ro", "./tasks/level21.txt:/task/task.txt:ro"]
+
+  level22:
+    <<: *level-defaults
+    build: { context: ., dockerfile: Dockerfile.level, args: { LEVEL: "22", EXTRA_PKGS: "curl bzip2" } }
+    container_name: ftwru_level22
+    hostname: level22
+    ports: ["3242:22"]
+    volumes: ["./flags/level22:/flag:ro", "./tasks/level22.txt:/task/task.txt:ro"]
+
+  level23:
+    <<: *level-defaults
+    build: { context: ., dockerfile: Dockerfile.level, args: { LEVEL: "23", EXTRA_PKGS: "curl xz-utils" } }
+    container_name: ftwru_level23
+    hostname: level23
+    ports: ["3243:22"]
+    volumes: ["./flags/level23:/flag:ro", "./tasks/level23.txt:/task/task.txt:ro"]
+
+  level24:
+    <<: *level-defaults
+    build: { context: ., dockerfile: Dockerfile.level, args: { LEVEL: "24", EXTRA_PKGS: "curl python3" } }
+    container_name: ftwru_level24
+    hostname: level24
+    ports: ["3244:22"]
+    volumes: ["./flags/level24:/flag:ro", "./tasks/level24.txt:/task/task.txt:ro"]
+
+  level25:
+    <<: *level-defaults
+    build: { context: ., dockerfile: Dockerfile.level, args: { LEVEL: "25", EXTRA_PKGS: "curl" } }
+    container_name: ftwru_level25
+    hostname: level25
+    ports: ["3245:22"]
+    volumes: ["./flags/level25:/flag:ro", "./tasks/level25.txt:/task/task.txt:ro"]
+
+  level26:
+    <<: *level-defaults
+    build: { context: ., dockerfile: Dockerfile.level, args: { LEVEL: "26", EXTRA_PKGS: "curl coreutils" } }
+    container_name: ftwru_level26
+    hostname: level26
+    ports: ["3246:22"]
+    volumes: ["./flags/level26:/flag:ro", "./tasks/level26.txt:/task/task.txt:ro"]
+
+  level27:
+    <<: *level-defaults
+    build: { context: ., dockerfile: Dockerfile.level, args: { LEVEL: "27", EXTRA_PKGS: "curl coreutils" } }
+    container_name: ftwru_level27
+    hostname: level27
+    ports: ["3247:22"]
+    volumes: ["./flags/level27:/flag:ro", "./tasks/level27.txt:/task/task.txt:ro"]
+
+  level28:
+    <<: *level-defaults
+    build: { context: ., dockerfile: Dockerfile.level, args: { LEVEL: "28", EXTRA_PKGS: "busybox" } }
+    container_name: ftwru_level28
+    hostname: level28
+    ports: ["3248:22"]
+    volumes: ["./flags/level28:/flag:ro", "./tasks/level28.txt:/task/task.txt:ro"]
+
+  level29:
+    <<: *level-defaults
+    build: { context: ., dockerfile: Dockerfile.level, args: { LEVEL: "29", EXTRA_PKGS: "netcat-openbsd" } }
+    container_name: ftwru_level29
+    hostname: level29
+    ports: ["3249:22"]
+    volumes: ["./flags/level29:/flag:ro", "./tasks/level29.txt:/task/task.txt:ro"]
+
+  level30:
+    <<: *level-defaults
+    build: { context: ., dockerfile: Dockerfile.level, args: { LEVEL: "30", EXTRA_PKGS: "curl coreutils xxd" } }
+    container_name: ftwru_level30
+    hostname: level30
+    ports: ["3250:22"]
+    volumes: ["./flags/level30:/flag:ro", "./tasks/level30.txt:/task/task.txt:ro"]
+
+  level31:
+    <<: *level-defaults
+    build: { context: ., dockerfile: Dockerfile.level, args: { LEVEL: "31", EXTRA_PKGS: "curl binutils grep" } }
+    container_name: ftwru_level31
+    hostname: level31
+    ports: ["3251:22"]
+    volumes: ["./flags/level31:/flag:ro", "./tasks/level31.txt:/task/task.txt:ro"]
+
+  level32:
+    <<: *level-defaults
+    build: { context: ., dockerfile: Dockerfile.level, args: { LEVEL: "32", EXTRA_PKGS: "python3" } }
+    container_name: ftwru_level32
+    hostname: level32
+    ports: ["3252:22"]
+    volumes: ["./flags/level32:/flag:ro", "./tasks/level32.txt:/task/task.txt:ro"]
+
+  level33:
+    <<: *level-defaults
+    build: { context: ., dockerfile: Dockerfile.level, args: { LEVEL: "33", EXTRA_PKGS: "" } }
+    container_name: ftwru_level33
+    hostname: level33
+    ports: ["3253:22"]
+    volumes: ["./flags/level33:/flag:ro", "./tasks/level33.txt:/task/task.txt:ro"]
+
+networks:
+  ftw:
+    driver: bridge

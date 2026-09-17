@@ -1,0 +1,18 @@
+
+============================================================
+ LEVEL 14  —  Integrity check (sha256)
+============================================================
+The file arrived — but did it arrive intact? Before you trust the
+password, VERIFY its checksum.
+
+On fileserver two files sit side by side:
+   http://fileserver/level14/next.txt
+   http://fileserver/level14/next.txt.sha256
+
+GOAL: download both, verify integrity, and only then read the
+      password for level15.
+
+Hint: sha256sum -c takes a checksum file and verifies it. Expect "OK".
+
+Next:  ssh level15@localhost -p 3235
+============================================================

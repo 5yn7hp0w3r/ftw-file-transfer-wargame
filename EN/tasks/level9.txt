@@ -1,0 +1,15 @@
+
+============================================================
+ LEVEL 9  —  base32
+============================================================
+base32 is less dense but survives case-insensitive / "noisy"
+channels (DNS, QR, voice).
+
+File  http://fileserver/level9/next.b32  is base32-encoded.
+
+GOAL: download and decode (password for level10).
+
+Hint: base32 works like base64 (-d). You already know how to fetch.
+
+Next:  ssh level10@localhost -p 3230
+============================================================

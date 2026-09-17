@@ -1,0 +1,15 @@
+
+============================================================
+ LEVEL 7  —  A whole directory in one stream (tar | nc)
+============================================================
+You have nc and tar. fileserver streams a whole folder as tar.gz on
+port 4446.
+
+GOAL: receive the stream, unpack on the fly, find flag.txt inside
+      (password for level8).
+
+Hint: pipe the receiver (nc) into the unpacker (tar); tar can read an
+      archive from stdin.
+
+Next:  ssh level8@localhost -p 3228
+============================================================

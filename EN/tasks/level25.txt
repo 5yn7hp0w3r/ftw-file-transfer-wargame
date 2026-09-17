@@ -1,0 +1,17 @@
+
+============================================================
+ LEVEL 25  —  UTF-16
+============================================================
+Not everything "unreadable" is a cipher. Sometimes it is just another
+text encoding. UTF-16 uses 2 bytes per character (a common obfuscation
+trick on Windows/PowerShell).
+
+File  http://fileserver/level25/next.utf16  is text in UTF-16LE.
+Available to you: iconv
+
+GOAL: transcode to UTF-8 and read it (password for level26).
+
+Hint: iconv -f UTF-16LE -t UTF-8
+
+Next:  ssh level26@localhost -p 3246
+============================================================

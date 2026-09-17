@@ -1,0 +1,18 @@
+
+============================================================
+ LEVEL 16  —  XOR obfuscation
+============================================================
+A favourite of malware and payloads: data XOR'd with a one-byte key.
+Not encryption, but unreadable to the eye and to grep.
+
+File  http://fileserver/level16/next.b64  is base64 of XOR-obfuscated
+bytes. XOR key: 0x42
+
+GOAL: strip base64, undo the XOR, read the password for level17.
+
+Hint: XOR is reversible with the same key (a ^ k ^ k == a). First
+      base64 -d, then walk the bytes ^ 0x42 (a python3 one-liner is
+      handy).
+
+Next:  ssh level17@localhost -p 3237
+============================================================

@@ -1,0 +1,10 @@
+
+============================================================
+ LEVEL 29  —  GHOST
+============================================================
+The password is served by some service on `fileserver`, but NOT on 80
+— the port is somewhere in the high thousands. Find the open port
+yourself, connect, take it.
+
+Next:  ssh level30@localhost -p 3250
+============================================================

@@ -1,0 +1,9 @@
+
+============================================================
+ LEVEL 30  —  GHOST
+============================================================
+You'll find the file (inspect what fileserver serves). But to the eye
+it's gibberish. Work out the encoding and unwrap it. Password inside.
+
+Next:  ssh level31@localhost -p 3251
+============================================================

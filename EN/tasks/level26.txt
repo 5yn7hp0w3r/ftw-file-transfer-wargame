@@ -1,0 +1,19 @@
+
+============================================================
+ LEVEL 26  —  basenc, layered   (PART 4)
+============================================================
+Real obfuscators rarely use one encoding — they stack them. Here the
+password is wrapped THREE times:
+      base64url  ->  base16  ->  base32
+(base32 was applied last, so peel it off first).
+
+File  http://fileserver/level26/next.enc
+Available to you: basenc  (from coreutils)
+
+GOAL: peel all three layers in order (password for level27).
+
+Hint: basenc has --base32 / --base16 / --base64url, each with -d.
+      Remove them in reverse order of how they were applied.
+
+Next:  ssh level27@localhost -p 3247
+============================================================

@@ -1,0 +1,11 @@
+FROM debian:12-slim
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+        python3 ncat netcat-openbsd openssh-server ca-certificates tar coreutils xxd openssl gzip sharutils socat bzip2 xz-utils && \
+    rm -rf /var/lib/apt/lists/* && \
+    mkdir -p /run/sshd && \
+    useradd -M -d /jail -s /usr/sbin/nologin scpuser
+COPY server/entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+EXPOSE 22 80 1337 4445 4446 4447 4448 4449 4450
+ENTRYPOINT ["/entrypoint.sh"]

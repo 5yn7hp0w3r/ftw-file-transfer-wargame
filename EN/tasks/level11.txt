@@ -1,0 +1,15 @@
+
+============================================================
+ LEVEL 11  —  gzip stream
+============================================================
+Compression is "encoding" too: fewer bytes on the wire. Data is
+often served gzip'd.
+
+File  http://fileserver/level11/next.gz  is gzip-compressed.
+
+GOAL: download and decompress the stream (password for level12).
+
+Hint: gunzip and zcat read gzip from stdin.
+
+Next:  ssh level12@localhost -p 3232
+============================================================

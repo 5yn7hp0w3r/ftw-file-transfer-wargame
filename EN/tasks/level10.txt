@@ -1,0 +1,15 @@
+
+============================================================
+ LEVEL 10  —  hex (xxd)
+============================================================
+Classic for binaries and "paste by hand": every byte as two hex
+digits.
+
+File  http://fileserver/level10/next.hex  is a hex dump.
+
+GOAL: download and turn it back into bytes (password for level11).
+
+Hint: xxd can reverse a plain hex dump — plain + revert. ( xxd -h )
+
+Next:  ssh level11@localhost -p 3231
+============================================================

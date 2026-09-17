@@ -1,0 +1,19 @@
+
+============================================================
+ LEVEL 18  —  UDP netcat
+============================================================
+TCP blocked by a firewall? UDP sometimes gets through. It is
+connectionless: the server stays silent until it receives at least one
+datagram from you.
+
+fileserver listens on UDP port 4449 and, once it "sees" you, sends
+the file.
+
+GOAL: get the password for level19 over UDP.
+
+Hint: nc speaks UDP via -u. The server must first "see" your datagram
+      — send something (even a blank line) so it learns your address,
+      then receive the reply. A timeout (-w) keeps you from hanging.
+
+Next:  ssh level19@localhost -p 3239
+============================================================

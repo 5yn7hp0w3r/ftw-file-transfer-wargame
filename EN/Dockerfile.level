@@ -1,0 +1,16 @@
+# One image for every level. The toolset is chosen via EXTRA_PKGS, so each level
+# "has one thing but not another".
+FROM debian:12-slim
+ARG LEVEL
+ARG EXTRA_PKGS=""
+ENV LEVEL=${LEVEL}
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends \
+        openssh-server ca-certificates ${EXTRA_PKGS} && \
+    rm -rf /var/lib/apt/lists/* && \
+    mkdir -p /run/sshd /task && \
+    useradd -m -s /bin/bash "level${LEVEL}"
+COPY level/entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+EXPOSE 22
+ENTRYPOINT ["/entrypoint.sh"]

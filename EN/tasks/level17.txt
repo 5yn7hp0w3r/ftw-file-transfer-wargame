@@ -1,0 +1,18 @@
+
+============================================================
+ LEVEL 17  —  Chunked transfer (split -> reassemble)
+============================================================
+Big file, or a size limit? Split it into parts, transfer each, then
+glue them back on the receiver.
+
+At  http://fileserver/level17/  sit several files part.00, part.01, ...
+— the chunks of one file, in order.
+
+GOAL: download all chunks, concatenate in the right order, read the
+      password for level18.
+
+Hint: open http://fileserver/level17/ with curl to see the chunk list.
+      They join with a plain cat in name order (part.00, part.01, ...).
+
+Next:  ssh level18@localhost -p 3238
+============================================================

@@ -1,0 +1,16 @@
+
+============================================================
+ LEVEL 12  —  openssl (AES-256)
+============================================================
+Encoding != encryption. Anyone unwraps base64, but this needs a key.
+File  http://fileserver/level12/next.enc  is encrypted with
+AES-256-CBC (pbkdf2 derivation) and wrapped in base64.
+Channel key: transfer
+
+GOAL: download and decrypt (password for level13).
+
+Hint: openssl enc can decrypt (-d) with the same parameters used to
+      encrypt: algorithm aes-256-cbc, pbkdf2, base64 input, key via -k.
+
+Next:  ssh level13@localhost -p 3233
+============================================================

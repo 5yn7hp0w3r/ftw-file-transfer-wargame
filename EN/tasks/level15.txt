@@ -1,0 +1,17 @@
+
+============================================================
+ LEVEL 15  —  uuencode / uudecode   (PART 3: exotic)
+============================================================
+An old but sturdy way to push binaries through text channels (mail,
+terminals) — uuencoding. Older than base64, still around in legacy.
+
+File  http://fileserver/level15/next.uu  is uuencoded (it carries a
+"file" named secret.txt).
+
+GOAL: download and decode, read the password for level16.
+
+Hint: uudecode parses the "begin ... end" header itself and recreates
+      the file under its original name. From the sharutils package.
+
+Next:  ssh level16@localhost -p 3236
+============================================================

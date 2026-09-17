@@ -1,0 +1,15 @@
+
+============================================================
+ LEVEL 21  —  Z85 (ZeroMQ base85)
+============================================================
+Z85 is a base85 variant from ZeroMQ, safe for strings/JSON.
+
+File  http://fileserver/level21/next.z85  is Z85-encoded.
+Available to you: basenc  (from coreutils)
+
+GOAL: download and decode (password for level22).
+
+Hint: basenc has a --z85 flag (and -d to decode).
+
+Next:  ssh level22@localhost -p 3242
+============================================================

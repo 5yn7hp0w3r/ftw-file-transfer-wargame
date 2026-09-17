@@ -1,0 +1,15 @@
+
+============================================================
+ LEVEL 22  —  bzip2
+============================================================
+bzip2 compresses harder than gzip (Burrows-Wheeler block sorting).
+
+File  http://fileserver/level22/next.bz2  is bzip2-compressed.
+Available to you: bunzip2 / bzip2
+
+GOAL: download and decompress the stream (password for level23).
+
+Hint: bunzip2 reads bzip2 from stdin (just like gunzip reads gzip).
+
+Next:  ssh level23@localhost -p 3243
+============================================================

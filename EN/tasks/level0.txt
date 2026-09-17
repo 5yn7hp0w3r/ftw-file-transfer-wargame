@@ -1,0 +1,17 @@
+
+============================================================
+ LEVEL 0  —  SCP over SSH
+============================================================
+This host has NO curl or wget — but it does have an ssh client.
+On the neighbour box `fileserver`, user scpuser (password: scpflag)
+holds a file level1.txt (scpuser is locked in an SFTP chroot — only
+that file is visible). Inside is the password for level1.
+
+GOAL: copy that file here and read it.
+
+Hint: scp copies over SSH just like cp copies locally:
+      scpuser@fileserver:level1.txt  ->  here.  ( man scp / sftp )
+
+Next (on YOUR host, a new terminal):
+      ssh level1@localhost -p 3221
+============================================================

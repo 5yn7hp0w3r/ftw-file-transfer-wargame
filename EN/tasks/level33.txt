@@ -1,0 +1,26 @@
+
+============================================================
+ LEVEL 33  —  ROOT OF ALL TRANSFERS   ✓ COMPLETE
+============================================================
+You cleared all 33 levels — all five parts:
+  channels · encoding · exotic · compression · GHOST.
+
+The password of THIS level is the final flag. That's it —
+you moved a file across the wire with every trick in the book.
+
+------------------------------------------------------------
+ Your real prize is your PERSISTENCE — you'll surely achieve
+ a lot. You will reach great heights.
+------------------------------------------------------------
+
+                       /\
+                      /  \            /\
+             /\      /    \          /  \      /\
+            /  \    /      \    /\   /    \    /  \
+           /    \  /        \  /  \ /      \  /    \
+          /      \/          \/    v        \/      \
+         /                                           \
+    ____/_____________________________________________\____
+              you climbed every one of them.  keep going.
+
+============================================================

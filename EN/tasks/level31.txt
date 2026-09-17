@@ -1,0 +1,9 @@
+
+============================================================
+ LEVEL 31  —  GHOST
+============================================================
+fileserver serves a "junk" binary dump. Somewhere in the noise the
+password is hidden. Dig it out of the garbage.
+
+Next:  ssh level32@localhost -p 3252
+============================================================

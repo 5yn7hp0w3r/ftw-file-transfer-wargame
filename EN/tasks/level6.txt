@@ -1,0 +1,15 @@
+
+============================================================
+ LEVEL 6  —  Netcat
+============================================================
+You have nc. On fileserver a listener on port 4445 hands a file to
+whoever connects.
+
+GOAL: connect, save what you get, read the password for level7.
+
+Hint: rule of thumb — whoever LISTENS on a port is the server; here
+      fileserver listens, you are the client. Redirect nc's output
+      into a file.
+
+Next:  ssh level7@localhost -p 3227
+============================================================

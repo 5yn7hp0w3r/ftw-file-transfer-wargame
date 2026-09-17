@@ -1,0 +1,16 @@
+
+============================================================
+ LEVEL 24  —  zlib (raw deflate)
+============================================================
+zlib is the same DEFLATE as gzip, but without the gzip wrapper. Found
+inside PNG, PDF, zip, network protocols. gunzip will NOT take it.
+
+File  http://fileserver/level24/next.zlib  is zlib-compressed.
+Available to you: python3
+
+GOAL: download and decompress (password for level25).
+
+Hint: zlib.decompress() in the python standard library.
+
+Next:  ssh level25@localhost -p 3245
+============================================================

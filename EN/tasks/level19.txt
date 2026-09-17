@@ -1,0 +1,17 @@
+
+============================================================
+ LEVEL 19  —  socat
+============================================================
+socat is "nc on steroids": the same sockets, but many address types
+(files, TLS, PTY, UNIX sockets). There is NO nc here — only socat.
+
+fileserver serves a file on TCP port 4450.
+
+GOAL: grab the password for level20 using socat.
+
+Hint: socat connects two addresses. One end is stdout (-), the other
+      is TCP:<host>:<port>. Route the server's stream to your screen
+      or a file.
+
+Next:  ssh level20@localhost -p 3240
+============================================================

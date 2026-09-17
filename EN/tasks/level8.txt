@@ -1,0 +1,16 @@
+
+============================================================
+ LEVEL 8  —  base64 over netcat   (PART 2: encoding)
+============================================================
+A binary breaks over a "raw" channel: NUL bytes, \r\n, telnet modes.
+base64 fixes it — the channel only ever sees text.
+
+On fileserver, port 4447 hands out data ENCODED in base64.
+
+GOAL: receive and decode (password for level9).
+
+Hint: base64 can also go the other way (flag -d). Pipe receive into
+      decode.
+
+Next:  ssh level9@localhost -p 3229
+============================================================

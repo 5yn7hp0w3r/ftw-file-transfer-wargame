@@ -1,0 +1,15 @@
+
+============================================================
+ LEVEL 5  —  Bare bash /dev/tcp
+============================================================
+Nothing network-capable at all. Only bash — but it has the
+/dev/tcp pseudo-device.
+
+GOAL: open a socket to fileserver:80, send GET /level5/next.txt,
+      strip the HTTP headers.
+
+Hint: exec N<>/dev/tcp/<host>/<port> opens a descriptor; write the
+      GET request into it, read the reply back.
+
+Next:  ssh level6@localhost -p 3226
+============================================================

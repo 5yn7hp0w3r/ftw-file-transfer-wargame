@@ -1,0 +1,14 @@
+
+============================================================
+ LEVEL 32  —  GHOST (final gate)
+============================================================
+No curl, no nc. Only what you find yourself.
+
+The password is served by a service on `fileserver` on a non-standard
+port, but the bytes are obfuscated. The tool, the port and the key —
+all up to you.
+
+Clear it — and you're at the finale.
+
+Next:  ssh level33@localhost -p 3253
+============================================================

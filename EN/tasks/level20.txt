@@ -1,0 +1,16 @@
+
+============================================================
+ LEVEL 20  —  base85 / ascii85   (PART 4: compression & encodings)
+============================================================
+base85 is denser than base64 (~25% saving) — 4 bytes pack into 5
+characters. Seen in PDF, Git, Adobe.
+
+File  http://fileserver/level20/next.b85  is base85-encoded.
+Available to you: python3
+
+GOAL: download and decode (password for level21).
+
+Hint: base64.b85decode() in the python standard library.
+
+Next:  ssh level21@localhost -p 3241
+============================================================

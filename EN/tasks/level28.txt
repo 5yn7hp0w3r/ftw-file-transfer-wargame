@@ -1,0 +1,14 @@
+
+============================================================
+ LEVEL 28  —  GHOST   (PART 5: hard, NO hints)
+============================================================
+From here on — silence. No technique, no path.
+
+One thing is known: the password lives somewhere on `fileserver`,
+over HTTP. The usual curl/wget were not given to you.
+
+Look around: what is even installed on this host? What can reach the
+network? Find the tool — and you'll find the path to the password.
+
+Next:  ssh level29@localhost -p 3249
+============================================================

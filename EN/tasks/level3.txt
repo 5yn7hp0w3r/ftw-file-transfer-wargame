@@ -1,0 +1,14 @@
+
+============================================================
+ LEVEL 3  —  Other interpreters
+============================================================
+No curl/wget, no python. But perl (with LWP), php and ruby live here.
+
+GOAL: fetch  http://fileserver/level3/next.txt  with any of them
+      (password for level4).
+
+Hint: each can read a URL as a string —
+      perl: LWP::Simple ·  php: file_get_contents ·  ruby: open-uri.
+
+Next:  ssh level4@localhost -p 3224
+============================================================
