@@ -5,6 +5,8 @@ encode. You SSH into a box whose toolset is deliberately stripped down, and you 
 technique is left. Inside the file you pull is the password for the next level. **34 levels**
 (0–33) in five parts + a fileserver = 35 containers.
 
+![Logging into FTW — a level greets you with its brief on SSH login](../1.png)
+
 ## Run
 
 ```bash

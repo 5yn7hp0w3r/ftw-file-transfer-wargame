@@ -1,9 +1,11 @@
 # FTW — File Transfer Wargame 🚩
 
-An **OverTheWire-style wargame** built entirely around one skill: **moving files across the
+An **OverTheWire-style CTF wargame** built entirely around one skill: **moving files across the
 wire** — downloading, serving, exfiltrating, encoding. You SSH into a box whose toolset is
 deliberately stripped down, so you must use whatever technique is left. Inside the file you
 pull is the password to the next level. Made as a hands-on companion to a file-transfer video.
+
+![Logging into FTW — a level greets you with its brief on SSH login](1.png)
 
 - **34 levels** (0–33) across **5 parts**, from `scp` to bare `/dev/tcp`, netcat, compression,
   obfuscation, and a hint-free **GHOST** hard mode.
